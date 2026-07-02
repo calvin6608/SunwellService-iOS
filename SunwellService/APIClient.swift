@@ -33,15 +33,16 @@ final class APIClient {
     private init() {}
 
     func login(username: String, password: String) async throws -> LoginResponse {
-        try await send(
+        let body = try encoder.encode(LoginRequest(username: username, password: password))
+        return try await send(
             path: "api/login",
             method: "POST",
-            body: LoginRequest(username: username, password: password)
+            bodyData: body
         )
     }
 
     func getPart(keyword: String, includeImage: Bool, mode: String) async throws -> PartDto {
-        try await send(
+        return try await send(
             path: "api/part",
             queryItems: [
                 URLQueryItem(name: "keyword", value: keyword),
@@ -52,30 +53,30 @@ final class APIClient {
     }
 
     func getOrder(orderNo: String) async throws -> OrderDto {
-        try await send(path: "api/order/\(orderNo.urlPathEncoded)")
+        return try await send(path: "api/order/\(orderNo.urlPathEncoded)")
     }
 
     func getDrawing(partNo: String) async throws -> DrawingDto {
-        try await send(path: "api/drw/\(partNo.urlPathEncoded)")
+        return try await send(path: "api/drw/\(partNo.urlPathEncoded)")
     }
 
     func searchServiceRecords(keyword: String) async throws -> [ServiceRecordDto] {
-        try await send(
+        return try await send(
             path: "api/service/search",
             queryItems: [URLQueryItem(name: "keyword", value: keyword)]
         )
     }
 
-    private func send<Response: Decodable, Body: Encodable>(
+    private func send<Response: Decodable>(
         path: String,
         method: String = "GET",
         queryItems: [URLQueryItem] = [],
-        body: Body?
+        bodyData: Data? = nil
     ) async throws -> Response {
         var request = try makeRequest(path: path, method: method, queryItems: queryItems)
 
-        if let body = body {
-            request.httpBody = try encoder.encode(body)
+        if let bodyData = bodyData {
+            request.httpBody = bodyData
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
 
@@ -94,20 +95,6 @@ final class APIClient {
         }
 
         return try decoder.decode(Response.self, from: data)
-    }
-
-    private func send<Response: Decodable>(
-        path: String,
-        method: String = "GET",
-        queryItems: [URLQueryItem] = []
-    ) async throws -> Response {
-        let body: EmptyBody? = nil
-        try await send(
-            path: path,
-            method: method,
-            queryItems: queryItems,
-            body: body
-        )
     }
 
     private func makeRequest(
@@ -148,9 +135,3 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
-
-private struct EmptyBody: Encodable {}
-
-
-
-
