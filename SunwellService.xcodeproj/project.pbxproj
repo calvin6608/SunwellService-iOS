@@ -1,4 +1,4 @@
-// !$*UTF8*$!
+﻿// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EAC9B012FF680000078F32F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A012FF680000078F32F /* Models.swift */; };
+		3EAC9B022FF680000078F32F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A022FF680000078F32F /* APIClient.swift */; };
+		3EAC9B032FF680000078F32F /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A032FF680000078F32F /* AuthSession.swift */; };
+		3EAC9B042FF680000078F32F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A042FF680000078F32F /* LoginView.swift */; };
+		3EAC9B052FF680000078F32F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A052FF680000078F32F /* HomeView.swift */; };
+		3EAC9B062FF680000078F32F /* PartSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A062FF680000078F32F /* PartSearchView.swift */; };
+		3EAC9B072FF680000078F32F /* OrderSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A072FF680000078F32F /* OrderSearchView.swift */; };
+		3EAC9B082FF680000078F32F /* DrawingSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A082FF680000078F32F /* DrawingSearchView.swift */; };
+		3EAC9B092FF680000078F32F /* ServiceRecordSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A092FF680000078F32F /* ServiceRecordSearchView.swift */; };
+		3EAC9B0A2FF680000078F32F /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC9A0A2FF680000078F32F /* ViewModifiers.swift */; };
 		3EAC1B332FF677E40078F32F /* SunwellServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B322FF677E40078F32F /* SunwellServiceApp.swift */; };
 		3EAC1B352FF677E40078F32F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B342FF677E40078F32F /* ContentView.swift */; };
 		3EAC1B372FF677E50078F32F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC1B362FF677E50078F32F /* Assets.xcassets */; };
@@ -34,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EAC9A012FF680000078F32F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		3EAC9A022FF680000078F32F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		3EAC9A032FF680000078F32F /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
+		3EAC9A042FF680000078F32F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3EAC9A052FF680000078F32F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3EAC9A062FF680000078F32F /* PartSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartSearchView.swift; sourceTree = "<group>"; };
+		3EAC9A072FF680000078F32F /* OrderSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSearchView.swift; sourceTree = "<group>"; };
+		3EAC9A082FF680000078F32F /* DrawingSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSearchView.swift; sourceTree = "<group>"; };
+		3EAC9A092FF680000078F32F /* ServiceRecordSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRecordSearchView.swift; sourceTree = "<group>"; };
+		3EAC9A0A2FF680000078F32F /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		3EAC1B2F2FF677E40078F32F /* SunwellService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunwellService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAC1B322FF677E40078F32F /* SunwellServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunwellServiceApp.swift; sourceTree = "<group>"; };
 		3EAC1B342FF677E40078F32F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +116,16 @@
 			children = (
 				3EAC1B322FF677E40078F32F /* SunwellServiceApp.swift */,
 				3EAC1B342FF677E40078F32F /* ContentView.swift */,
+				3EAC9A012FF680000078F32F /* Models.swift */,
+				3EAC9A022FF680000078F32F /* APIClient.swift */,
+				3EAC9A032FF680000078F32F /* AuthSession.swift */,
+				3EAC9A042FF680000078F32F /* LoginView.swift */,
+				3EAC9A052FF680000078F32F /* HomeView.swift */,
+				3EAC9A062FF680000078F32F /* PartSearchView.swift */,
+				3EAC9A072FF680000078F32F /* OrderSearchView.swift */,
+				3EAC9A082FF680000078F32F /* DrawingSearchView.swift */,
+				3EAC9A092FF680000078F32F /* ServiceRecordSearchView.swift */,
+				3EAC9A0A2FF680000078F32F /* ViewModifiers.swift */,
 				3EAC1B362FF677E50078F32F /* Assets.xcassets */,
 				3EAC1B382FF677E50078F32F /* Preview Content */,
 			);
@@ -258,6 +288,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EAC1B352FF677E40078F32F /* ContentView.swift in Sources */,
+				3EAC9B012FF680000078F32F /* Models.swift in Sources */,
+				3EAC9B022FF680000078F32F /* APIClient.swift in Sources */,
+				3EAC9B032FF680000078F32F /* AuthSession.swift in Sources */,
+				3EAC9B042FF680000078F32F /* LoginView.swift in Sources */,
+				3EAC9B052FF680000078F32F /* HomeView.swift in Sources */,
+				3EAC9B062FF680000078F32F /* PartSearchView.swift in Sources */,
+				3EAC9B072FF680000078F32F /* OrderSearchView.swift in Sources */,
+				3EAC9B082FF680000078F32F /* DrawingSearchView.swift in Sources */,
+				3EAC9B092FF680000078F32F /* ServiceRecordSearchView.swift in Sources */,
+				3EAC9B0A2FF680000078F32F /* ViewModifiers.swift in Sources */,
 				3EAC1B332FF677E40078F32F /* SunwellServiceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -475,7 +515,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,7 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellServiceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,3 +622,4 @@
 	};
 	rootObject = 3EAC1B272FF677E40078F32F /* Project object */;
 }
+

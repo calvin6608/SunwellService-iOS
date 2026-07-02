@@ -1,4 +1,4 @@
-//
+﻿//
 //  SunwellServiceApp.swift
 //  SunwellService
 //
@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SunwellServiceApp: App {
+    @StateObject private var session = AuthSession()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(session)
         }
     }
 }

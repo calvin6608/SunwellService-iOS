@@ -1,21 +1,25 @@
-//
-//  ContentView.swift
-//  SunwellService
-//
-//  Created by Calvin on 2026/7/2.
-//
-
-import SwiftUI
+﻿import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var session: AuthSession
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Group {
+            if session.isLoggedIn {
+                HomeView()
+            } else {
+                LoginView()
+            }
+        }
+        .tint(.sunwellBlue)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AuthSession())
     }
 }
+
+
