@@ -65,6 +65,42 @@ struct OracleCardRow: Decodable {
     let value: String?
 }
 
+
+struct BomDto: Decodable {
+    let partNo: String
+    let direction: String
+    let paths: [String]
+}
+
+struct ImageDto: Decodable {
+    let partNo: String
+    let success: Bool
+    let message: String?
+    let imageUrl: String?
+}
+
+struct PncDto: Decodable {
+    let partNo: String
+    let success: Bool
+    let result: String?
+    let imageUrl: String?
+    let message: String?
+}
+
+struct CreoBomDto: Decodable {
+    let partNo: String
+    let success: Bool
+    let message: String?
+    let pdfUrl: String?
+}
+
+struct BtmDto: Decodable {
+    let partNo: String
+    let mode: String
+    let success: Bool
+    let result: String?
+}
+
 struct DrawingDto: Decodable {
     let partNo: String
     let success: Bool
@@ -88,3 +124,4 @@ struct AuthCredentials {
     let token: String
     let username: String
 }
+

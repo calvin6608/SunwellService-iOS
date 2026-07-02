@@ -8,7 +8,7 @@ struct HomeView: View {
             List {
                 Section("主要查詢") {
                     NavigationLink("01 訂單資料查詢", destination: OrderSearchView())
-                    NavigationLink("Part/BOM", destination: PartSearchView())
+                    NavigationLink("02 零件 / BOM 查詢", destination: PartSearchView())
                     NavigationLink("CAD Drawing", destination: DrawingSearchView())
                     NavigationLink("Service Records", destination: ServiceRecordSearchView())
                 }
@@ -38,6 +38,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 
 

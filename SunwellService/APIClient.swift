@@ -52,6 +52,41 @@ final class APIClient {
         )
     }
 
+
+    func getBomUp(partNo: String) async throws -> BomDto {
+        return try await send(path: "api/bom/up/\(partNo.urlPathEncoded)")
+    }
+
+    func getBomDown(partNo: String) async throws -> BomDto {
+        return try await send(path: "api/bom/down/\(partNo.urlPathEncoded)")
+    }
+
+    func getImage(partNo: String) async throws -> ImageDto {
+        return try await send(path: "api/image/\(partNo.urlPathEncoded)")
+    }
+
+    func getPnc(partNo: String) async throws -> PncDto {
+        return try await send(path: "api/pnc/\(partNo.urlPathEncoded)")
+    }
+
+    func getCreoBom(partNo: String) async throws -> CreoBomDto {
+        return try await send(path: "api/creo-bom/\(partNo.urlPathEncoded)")
+    }
+
+    func getBtm(mode: Int, partNo: String) async throws -> BtmDto {
+        return try await send(path: "api/btm/\(mode)/\(partNo.urlPathEncoded)")
+    }
+
+    func suggestParts(keyword: String, mode: String) async throws -> [String] {
+        return try await send(
+            path: "api/part/suggest",
+            queryItems: [
+                URLQueryItem(name: "keyword", value: keyword),
+                URLQueryItem(name: "mode", value: mode)
+            ]
+        )
+    }
+
     func getOrder(orderNo: String) async throws -> OrderDto {
         return try await send(path: "api/order/\(orderNo.urlPathEncoded)")
     }
@@ -159,4 +194,5 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+
 
