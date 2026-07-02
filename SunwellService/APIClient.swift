@@ -56,6 +56,30 @@ final class APIClient {
         return try await send(path: "api/order/\(orderNo.urlPathEncoded)")
     }
 
+    func searchOrder(mode: String, keyword: String) async throws -> OrderDto {
+        return try await send(
+            path: "api/order/search",
+            queryItems: [
+                URLQueryItem(name: "mode", value: mode),
+                URLQueryItem(name: "keyword", value: keyword)
+            ]
+        )
+    }
+
+    func searchOracleOrder(keyword: String) async throws -> OracleSearchResponse {
+        return try await send(
+            path: "api/order/oracle",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func suggestOrders(keyword: String) async throws -> [String] {
+        return try await send(
+            path: "api/order/suggest",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
     func getDrawing(partNo: String) async throws -> DrawingDto {
         return try await send(path: "api/drw/\(partNo.urlPathEncoded)")
     }
@@ -135,3 +159,4 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+

@@ -6,8 +6,8 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             List {
-                Section("Main Query") {
-                    NavigationLink("Order", destination: OrderSearchView())
+                Section("主要查詢") {
+                    NavigationLink("01 訂單資料查詢", destination: OrderSearchView())
                     NavigationLink("Part/BOM", destination: PartSearchView())
                     NavigationLink("CAD Drawing", destination: DrawingSearchView())
                     NavigationLink("Service Records", destination: ServiceRecordSearchView())
@@ -38,6 +38,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 
 
