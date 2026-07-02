@@ -21,18 +21,16 @@ struct LoginView: View {
                             .font(.title2.weight(.semibold))
                         Text("iOS starter")
                             .font(.footnote)
-                            .foregroundStyle(.secondary)
+                            .foregroundColor(.secondary)
                     }
 
                     VStack(spacing: 14) {
                         TextField("Username", text: $username)
-                            .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled()
-                            .textContentType(.username)
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
                             .sunwellField()
 
                         SecureField("Password", text: $password)
-                            .textContentType(.password)
                             .sunwellField()
 
                         Button {
@@ -46,7 +44,7 @@ struct LoginView: View {
                             HStack {
                                 if session.isLoading {
                                     ProgressView()
-                                        .tint(.white)
+                                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
                                 }
                                 Text(session.isLoading ? "Logging in..." : "Login")
                                     .frame(maxWidth: .infinity)
@@ -60,7 +58,7 @@ struct LoginView: View {
                     if !session.errorMessage.isEmpty {
                         Text(session.errorMessage)
                             .font(.callout)
-                            .foregroundStyle(.red)
+                            .foregroundColor(.red)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
@@ -73,4 +71,6 @@ struct LoginView: View {
         }
     }
 }
+
+
 

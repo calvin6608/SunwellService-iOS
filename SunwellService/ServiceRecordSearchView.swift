@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 
 struct ServiceRecordSearchView: View {
     @State private var keyword = ""
@@ -10,7 +10,7 @@ struct ServiceRecordSearchView: View {
         Form {
             Section("Search") {
                 TextField("Customer, machine, issue...", text: $keyword)
-                    .autocorrectionDisabled()
+                    .disableAutocorrection(true)
 
                 Button {
                     Task { await search() }
@@ -34,7 +34,7 @@ struct ServiceRecordSearchView: View {
                                 Spacer()
                                 Text(record.date ?? "")
                                     .font(.caption)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
 
                             if let machineNo = record.machineNo, !machineNo.isEmpty {
@@ -49,7 +49,7 @@ struct ServiceRecordSearchView: View {
                             if let solution = record.solution, !solution.isEmpty {
                                 Text(solution)
                                     .font(.footnote)
-                                    .foregroundStyle(.secondary)
+                                    .foregroundColor(.secondary)
                             }
                         }
                         .padding(.vertical, 4)
@@ -60,7 +60,7 @@ struct ServiceRecordSearchView: View {
             if !errorMessage.isEmpty {
                 Section {
                     Text(errorMessage)
-                        .foregroundStyle(.red)
+                        .foregroundColor(.red)
                 }
             }
         }
@@ -81,3 +81,5 @@ struct ServiceRecordSearchView: View {
         isLoading = false
     }
 }
+
+

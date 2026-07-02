@@ -1,4 +1,4 @@
-import Foundation
+﻿import Foundation
 
 struct LoginRequest: Encodable {
     let username: String
@@ -48,3 +48,4 @@ struct AuthCredentials {
     let token: String
     let username: String
 }
+

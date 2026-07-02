@@ -19,14 +19,14 @@ struct HomeView: View {
                     Label("Commissioning", systemImage: "checklist")
                     Label("Tools", systemImage: "folder")
                 }
-                .foregroundStyle(.secondary)
+                .foregroundColor(.secondary)
             }
             .navigationTitle("Sunwell")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text(session.username.isEmpty ? "User" : session.username)
                         .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
 
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -38,6 +38,7 @@ struct HomeView: View {
         }
     }
 }
+
 
 
 

@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 
 struct PartSearchView: View {
     @State private var keyword = ""
@@ -12,8 +12,8 @@ struct PartSearchView: View {
         Form {
             Section("Search") {
                 TextField("Part number or keyword", text: $keyword)
-                    .textInputAutocapitalization(.characters)
-                    .autocorrectionDisabled()
+                    .autocapitalization(.allCharacters)
+                    .disableAutocorrection(true)
 
                 Picker("Mode", selection: $mode) {
                     Text("Starts With").tag("start")
@@ -35,13 +35,13 @@ struct PartSearchView: View {
                 .disabled(isLoading || keyword.trimmed.isEmpty)
             }
 
-            if let result {
+            if let result = result {
                 Section("Result") {
-                    LabeledContent("Part No", value: result.partNo)
-                    LabeledContent("Name", value: result.name ?? "-")
-                    LabeledContent("Part Number", value: yesNo(result.isPartNumber))
+                    DetailRow("Part No", value: result.partNo)
+                    DetailRow("Name", value: result.name ?? "-")
+                    DetailRow("Part Number", value: yesNo(result.isPartNumber))
                     if let imageUrl = result.imageUrl, !imageUrl.isEmpty {
-                        LabeledContent("Image URL", value: imageUrl)
+                        DetailRow("Image URL", value: imageUrl)
                     }
                 }
             }
@@ -49,7 +49,7 @@ struct PartSearchView: View {
             if !errorMessage.isEmpty {
                 Section {
                     Text(errorMessage)
-                        .foregroundStyle(.red)
+                        .foregroundColor(.red)
                 }
             }
         }
@@ -74,3 +74,6 @@ struct PartSearchView: View {
         isLoading = false
     }
 }
+
+
+

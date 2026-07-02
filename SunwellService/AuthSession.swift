@@ -33,7 +33,7 @@ final class AuthSession: ObservableObject {
 
         guard !savedUsername.isEmpty,
               !savedToken.isEmpty,
-              let expireAt,
+              let expireAt = expireAt,
               Date() <= expireAt else {
             logout(keepUsername: true)
             return
@@ -106,4 +106,6 @@ private extension String {
         return trimmed.isEmpty ? nil : trimmed
     }
 }
+
+
 

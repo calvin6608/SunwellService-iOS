@@ -11,7 +11,7 @@ struct ContentView: View {
                 LoginView()
             }
         }
-        .tint(.sunwellBlue)
+        .accentColor(.sunwellBlue)
     }
 }
 
@@ -21,5 +21,6 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(AuthSession())
     }
 }
+
 
 

@@ -74,7 +74,7 @@ final class APIClient {
     ) async throws -> Response {
         var request = try makeRequest(path: path, method: method, queryItems: queryItems)
 
-        if let body {
+        if let body = body {
             request.httpBody = try encoder.encode(body)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         }
@@ -132,7 +132,7 @@ final class APIClient {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue(apiKey, forHTTPHeaderField: "X-API-KEY")
 
-        if let credentials {
+        if let credentials = credentials {
             request.setValue("Bearer \(credentials.token)", forHTTPHeaderField: "Authorization")
             request.setValue(credentials.username, forHTTPHeaderField: "X-USERNAME")
         }
@@ -150,5 +150,7 @@ private extension String {
 }
 
 private struct EmptyBody: Encodable {}
+
+
 
 

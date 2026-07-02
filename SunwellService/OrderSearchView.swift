@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 
 struct OrderSearchView: View {
     @State private var orderNo = ""
@@ -10,8 +10,8 @@ struct OrderSearchView: View {
         Form {
             Section("Search") {
                 TextField("Order number", text: $orderNo)
-                    .textInputAutocapitalization(.characters)
-                    .autocorrectionDisabled()
+                    .autocapitalization(.allCharacters)
+                    .disableAutocorrection(true)
 
                 Button {
                     Task { await search() }
@@ -25,9 +25,9 @@ struct OrderSearchView: View {
                 .disabled(isLoading || orderNo.trimmed.isEmpty)
             }
 
-            if let result {
+            if let result = result {
                 Section("Result") {
-                    LabeledContent("Order No", value: result.orderNo)
+                    DetailRow("Order No", value: result.orderNo)
                     if let text = result.result, !text.isEmpty {
                         Text(text)
                             .font(.body.monospaced())
@@ -38,7 +38,7 @@ struct OrderSearchView: View {
             if !errorMessage.isEmpty {
                 Section {
                     Text(errorMessage)
-                        .foregroundStyle(.red)
+                        .foregroundColor(.red)
                 }
             }
         }
@@ -59,3 +59,6 @@ struct OrderSearchView: View {
         isLoading = false
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 
 struct DrawingSearchView: View {
     @State private var partNo = ""
@@ -10,8 +10,8 @@ struct DrawingSearchView: View {
         Form {
             Section("Search") {
                 TextField("Part number", text: $partNo)
-                    .textInputAutocapitalization(.characters)
-                    .autocorrectionDisabled()
+                    .autocapitalization(.allCharacters)
+                    .disableAutocorrection(true)
 
                 Button {
                     Task { await search() }
@@ -25,22 +25,22 @@ struct DrawingSearchView: View {
                 .disabled(isLoading || partNo.trimmed.isEmpty)
             }
 
-            if let result {
+            if let result = result {
                 Section("Result") {
-                    LabeledContent("Part No", value: result.partNo)
-                    LabeledContent("Success", value: result.success ? "Yes" : "No")
-                    LabeledContent("Type", value: result.resultType ?? "-")
+                    DetailRow("Part No", value: result.partNo)
+                    DetailRow("Success", value: result.success ? "Yes" : "No")
+                    DetailRow("Type", value: result.resultType ?? "-")
                     if let message = result.message, !message.isEmpty {
                         Text(message)
                     }
                     if let urlText = result.url, let url = URL(string: urlText) {
                         Link("Open Drawing", destination: url)
                     } else if let urlText = result.url, !urlText.isEmpty {
-                        LabeledContent("URL", value: urlText)
+                        DetailRow("URL", value: urlText)
                     }
                     if result.approvalRequired == true {
                         Label("Approval required", systemImage: "exclamationmark.triangle")
-                            .foregroundStyle(.orange)
+                            .foregroundColor(.orange)
                     }
                 }
             }
@@ -48,7 +48,7 @@ struct DrawingSearchView: View {
             if !errorMessage.isEmpty {
                 Section {
                     Text(errorMessage)
-                        .foregroundStyle(.red)
+                        .foregroundColor(.red)
                 }
             }
         }
@@ -69,3 +69,6 @@ struct DrawingSearchView: View {
         isLoading = false
     }
 }
+
+
+
