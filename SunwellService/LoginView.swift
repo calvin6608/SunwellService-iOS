@@ -1,4 +1,4 @@
-import SwiftUI
+﻿import SwiftUI
 
 struct LoginView: View {
     @EnvironmentObject private var session: AuthSession
@@ -7,7 +7,7 @@ struct LoginView: View {
     @State private var password = ""
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ScrollView {
                 VStack(spacing: 24) {
                     Image("LoginLogo")
@@ -73,3 +73,4 @@ struct LoginView: View {
         }
     }
 }
+

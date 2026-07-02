@@ -4,7 +4,7 @@ struct HomeView: View {
     @EnvironmentObject private var session: AuthSession
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             List {
                 Section("Main Query") {
                     NavigationLink("Order", destination: OrderSearchView())
@@ -38,5 +38,6 @@ struct HomeView: View {
         }
     }
 }
+
 
 
