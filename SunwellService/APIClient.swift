@@ -115,6 +115,22 @@ final class APIClient {
         )
     }
 
+
+
+    func getErpStockChange(partNo: String) async throws -> ErpStockChangeResponse {
+        return try await send(
+            path: "api/erp/stock-change",
+            queryItems: [URLQueryItem(name: "partNo", value: partNo)]
+        )
+    }
+
+    func dataSearch(command: String, keyword: String) async throws -> DataSearchDto {
+        return try await send(
+            path: "api/datasearch/\(command.urlPathEncoded)",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
     func getDrawing(partNo: String) async throws -> DrawingDto {
         return try await send(path: "api/drw/\(partNo.urlPathEncoded)")
     }
@@ -194,5 +210,7 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+
+
 
 

@@ -9,7 +9,9 @@ struct HomeView: View {
                 Section("主要查詢") {
                     NavigationLink("01 訂單資料查詢", destination: OrderSearchView())
                     NavigationLink("02 零件 / BOM 查詢", destination: PartSearchView())
-                    NavigationLink("CAD Drawing", destination: DrawingSearchView())
+                    NavigationLink("03 資料查詢", destination: DataSearchView())
+                    NavigationLink("99 ERP", destination: ErpSearchView())
+                    NavigationLink("07 CAD 圖檔查詢", destination: DrawingSearchView())
                     NavigationLink("Service Records", destination: ServiceRecordSearchView())
                 }
 
@@ -38,9 +40,4 @@ struct HomeView: View {
         }
     }
 }
-
-
-
-
-
 
