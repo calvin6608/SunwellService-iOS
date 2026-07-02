@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EAC1B332FF677E40078F32F /* SunwellServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B322FF677E40078F32F /* SunwellServiceApp.swift */; };
+		3EAC1B352FF677E40078F32F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B342FF677E40078F32F /* ContentView.swift */; };
+		3EAC1B372FF677E50078F32F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC1B362FF677E50078F32F /* Assets.xcassets */; };
+		3EAC1B3A2FF677E50078F32F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC1B392FF677E50078F32F /* Preview Assets.xcassets */; };
+		3EAC1B442FF677E60078F32F /* SunwellServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B432FF677E60078F32F /* SunwellServiceTests.swift */; };
+		3EAC1B4E2FF677E60078F32F /* SunwellServiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B4D2FF677E60078F32F /* SunwellServiceUITests.swift */; };
+		3EAC1B502FF677E60078F32F /* SunwellServiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC1B4F2FF677E60078F32F /* SunwellServiceUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EAC1B402FF677E60078F32F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAC1B272FF677E40078F32F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EAC1B2E2FF677E40078F32F;
+			remoteInfo = SunwellService;
+		};
+		3EAC1B4A2FF677E60078F32F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EAC1B272FF677E40078F32F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EAC1B2E2FF677E40078F32F;
+			remoteInfo = SunwellService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3EAC1B2F2FF677E40078F32F /* SunwellService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunwellService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAC1B322FF677E40078F32F /* SunwellServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunwellServiceApp.swift; sourceTree = "<group>"; };
+		3EAC1B342FF677E40078F32F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3EAC1B362FF677E50078F32F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3EAC1B392FF677E50078F32F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3EAC1B3F2FF677E60078F32F /* SunwellServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunwellServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAC1B432FF677E60078F32F /* SunwellServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunwellServiceTests.swift; sourceTree = "<group>"; };
+		3EAC1B492FF677E60078F32F /* SunwellServiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunwellServiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAC1B4D2FF677E60078F32F /* SunwellServiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunwellServiceUITests.swift; sourceTree = "<group>"; };
+		3EAC1B4F2FF677E60078F32F /* SunwellServiceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunwellServiceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EAC1B2C2FF677E40078F32F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EAC1B3C2FF677E60078F32F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EAC1B462FF677E60078F32F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EAC1B262FF677E40078F32F = {
+			isa = PBXGroup;
+			children = (
+				3EAC1B312FF677E40078F32F /* SunwellService */,
+				3EAC1B422FF677E60078F32F /* SunwellServiceTests */,
+				3EAC1B4C2FF677E60078F32F /* SunwellServiceUITests */,
+				3EAC1B302FF677E40078F32F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EAC1B302FF677E40078F32F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EAC1B2F2FF677E40078F32F /* SunwellService.app */,
+				3EAC1B3F2FF677E60078F32F /* SunwellServiceTests.xctest */,
+				3EAC1B492FF677E60078F32F /* SunwellServiceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EAC1B312FF677E40078F32F /* SunwellService */ = {
+			isa = PBXGroup;
+			children = (
+				3EAC1B322FF677E40078F32F /* SunwellServiceApp.swift */,
+				3EAC1B342FF677E40078F32F /* ContentView.swift */,
+				3EAC1B362FF677E50078F32F /* Assets.xcassets */,
+				3EAC1B382FF677E50078F32F /* Preview Content */,
+			);
+			path = SunwellService;
+			sourceTree = "<group>";
+		};
+		3EAC1B382FF677E50078F32F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3EAC1B392FF677E50078F32F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3EAC1B422FF677E60078F32F /* SunwellServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EAC1B432FF677E60078F32F /* SunwellServiceTests.swift */,
+			);
+			path = SunwellServiceTests;
+			sourceTree = "<group>";
+		};
+		3EAC1B4C2FF677E60078F32F /* SunwellServiceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3EAC1B4D2FF677E60078F32F /* SunwellServiceUITests.swift */,
+				3EAC1B4F2FF677E60078F32F /* SunwellServiceUITestsLaunchTests.swift */,
+			);
+			path = SunwellServiceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EAC1B2E2FF677E40078F32F /* SunwellService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAC1B532FF677E60078F32F /* Build configuration list for PBXNativeTarget "SunwellService" */;
+			buildPhases = (
+				3EAC1B2B2FF677E40078F32F /* Sources */,
+				3EAC1B2C2FF677E40078F32F /* Frameworks */,
+				3EAC1B2D2FF677E40078F32F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SunwellService;
+			productName = SunwellService;
+			productReference = 3EAC1B2F2FF677E40078F32F /* SunwellService.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3EAC1B3E2FF677E60078F32F /* SunwellServiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAC1B562FF677E60078F32F /* Build configuration list for PBXNativeTarget "SunwellServiceTests" */;
+			buildPhases = (
+				3EAC1B3B2FF677E60078F32F /* Sources */,
+				3EAC1B3C2FF677E60078F32F /* Frameworks */,
+				3EAC1B3D2FF677E60078F32F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EAC1B412FF677E60078F32F /* PBXTargetDependency */,
+			);
+			name = SunwellServiceTests;
+			productName = SunwellServiceTests;
+			productReference = 3EAC1B3F2FF677E60078F32F /* SunwellServiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3EAC1B482FF677E60078F32F /* SunwellServiceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAC1B592FF677E60078F32F /* Build configuration list for PBXNativeTarget "SunwellServiceUITests" */;
+			buildPhases = (
+				3EAC1B452FF677E60078F32F /* Sources */,
+				3EAC1B462FF677E60078F32F /* Frameworks */,
+				3EAC1B472FF677E60078F32F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EAC1B4B2FF677E60078F32F /* PBXTargetDependency */,
+			);
+			name = SunwellServiceUITests;
+			productName = SunwellServiceUITests;
+			productReference = 3EAC1B492FF677E60078F32F /* SunwellServiceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EAC1B272FF677E40078F32F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					3EAC1B2E2FF677E40078F32F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					3EAC1B3E2FF677E60078F32F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 3EAC1B2E2FF677E40078F32F;
+					};
+					3EAC1B482FF677E60078F32F = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 3EAC1B2E2FF677E40078F32F;
+					};
+				};
+			};
+			buildConfigurationList = 3EAC1B2A2FF677E40078F32F /* Build configuration list for PBXProject "SunwellService" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3EAC1B262FF677E40078F32F;
+			productRefGroup = 3EAC1B302FF677E40078F32F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EAC1B2E2FF677E40078F32F /* SunwellService */,
+				3EAC1B3E2FF677E60078F32F /* SunwellServiceTests */,
+				3EAC1B482FF677E60078F32F /* SunwellServiceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EAC1B2D2FF677E40078F32F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAC1B3A2FF677E50078F32F /* Preview Assets.xcassets in Resources */,
+				3EAC1B372FF677E50078F32F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EAC1B3D2FF677E60078F32F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EAC1B472FF677E60078F32F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EAC1B2B2FF677E40078F32F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAC1B352FF677E40078F32F /* ContentView.swift in Sources */,
+				3EAC1B332FF677E40078F32F /* SunwellServiceApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EAC1B3B2FF677E60078F32F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAC1B442FF677E60078F32F /* SunwellServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EAC1B452FF677E60078F32F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAC1B4E2FF677E60078F32F /* SunwellServiceUITests.swift in Sources */,
+				3EAC1B502FF677E60078F32F /* SunwellServiceUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EAC1B412FF677E60078F32F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EAC1B2E2FF677E40078F32F /* SunwellService */;
+			targetProxy = 3EAC1B402FF677E60078F32F /* PBXContainerItemProxy */;
+		};
+		3EAC1B4B2FF677E60078F32F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EAC1B2E2FF677E40078F32F /* SunwellService */;
+			targetProxy = 3EAC1B4A2FF677E60078F32F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3EAC1B512FF677E60078F32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EAC1B522FF677E60078F32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3EAC1B542FF677E60078F32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SunwellService/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3EAC1B552FF677E60078F32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SunwellService/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3EAC1B572FF677E60078F32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunwellService.app/SunwellService";
+			};
+			name = Debug;
+		};
+		3EAC1B582FF677E60078F32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellServiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunwellService.app/SunwellService";
+			};
+			name = Release;
+		};
+		3EAC1B5A2FF677E60078F32F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellServiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SunwellService;
+			};
+			name = Debug;
+		};
+		3EAC1B5B2FF677E60078F32F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Sunwell.SunwellServiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SunwellService;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EAC1B2A2FF677E40078F32F /* Build configuration list for PBXProject "SunwellService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAC1B512FF677E60078F32F /* Debug */,
+				3EAC1B522FF677E60078F32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EAC1B532FF677E60078F32F /* Build configuration list for PBXNativeTarget "SunwellService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAC1B542FF677E60078F32F /* Debug */,
+				3EAC1B552FF677E60078F32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EAC1B562FF677E60078F32F /* Build configuration list for PBXNativeTarget "SunwellServiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAC1B572FF677E60078F32F /* Debug */,
+				3EAC1B582FF677E60078F32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EAC1B592FF677E60078F32F /* Build configuration list for PBXNativeTarget "SunwellServiceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAC1B5A2FF677E60078F32F /* Debug */,
+				3EAC1B5B2FF677E60078F32F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EAC1B272FF677E40078F32F /* Project object */;
+}
