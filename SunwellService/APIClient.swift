@@ -228,6 +228,52 @@ final class APIClient {
         )
     }
 
+
+    func getGanttPdf(mode: Int) async throws -> GanttPdfDto {
+        return try await send(path: "api/gantt/\(mode)")
+    }
+
+    func getProjectGanttPdf() async throws -> GanttPdfDto {
+        return try await send(path: "api/gantt/project")
+    }
+
+    func getGeText(command: String, keyword: String, sortBy: String? = nil) async throws -> GeTextResultDto {
+        var items = [URLQueryItem(name: "keyword", value: keyword)]
+        if let sortBy = sortBy, !sortBy.isEmpty {
+            items.append(URLQueryItem(name: "sortBy", value: sortBy))
+        }
+        return try await send(path: "api/ge/\(command)", queryItems: items)
+    }
+
+    func getGePdf(command: String, keyword: String) async throws -> GePdfDto {
+        return try await send(
+            path: "api/ge/\(command)",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func suggestProjects(keyword: String, mode: String) async throws -> [String] {
+        return try await send(
+            path: "api/ge/project-suggest",
+            queryItems: [
+                URLQueryItem(name: "keyword", value: keyword),
+                URLQueryItem(name: "mode", value: mode)
+            ]
+        )
+    }
+
+    func updateGeData() async throws -> GeUpdateDto {
+        return try await send(path: "api/ge/update", method: "POST")
+    }
+
+    func askScheduleAi(command: String, question: String) async throws -> AiAnswerDto {
+        let body = try encoder.encode(AiQuestionRequest(question: question))
+        return try await send(
+            path: "api/ai/\(command)",
+            method: "POST",
+            bodyData: body
+        )
+    }
     func searchServiceRecords(keyword: String) async throws -> [ServiceRecordDto] {
         return try await send(
             path: "api/service/search",

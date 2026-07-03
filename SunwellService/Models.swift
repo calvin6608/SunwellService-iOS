@@ -236,6 +236,41 @@ struct MachineBomTextDto: Decodable {
     let success: Bool
     let result: String?
 }
+
+struct GanttPdfDto: Decodable {
+    let mode: String?
+    let success: Bool
+    let message: String?
+    let pdfUrl: String?
+}
+
+struct GeTextResultDto: Decodable {
+    let command: String?
+    let success: Bool
+    let result: String?
+}
+
+struct GePdfDto: Decodable {
+    let command: String?
+    let success: Bool
+    let message: String?
+    let pdfUrl: String?
+}
+
+struct GeUpdateDto: Decodable {
+    let success: Bool
+    let message: String?
+}
+
+struct AiQuestionRequest: Encodable {
+    let question: String
+}
+
+struct AiAnswerDto: Decodable {
+    let command: String?
+    let success: Bool
+    let answer: String?
+}
 struct ToolDto: Decodable {
     let command: String
     let success: Bool

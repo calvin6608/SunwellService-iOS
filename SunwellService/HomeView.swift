@@ -56,6 +56,32 @@ struct HomeView: View {
                             }
                         }
 
+
+                        dashboardSection(title: "生管 / 排程", icon: "chart.bar") {
+                            LazyVGrid(columns: columns, spacing: 12) {
+                                navCard(
+                                    index: "04",
+                                    title: "生管進度",
+                                    subtitle: "Scheduling",
+                                    icon: "chart.bar",
+                                    destination: ProductionScheduleView()
+                                )
+                                navCard(
+                                    index: "05",
+                                    title: "現有專案日期",
+                                    subtitle: "Project Dates",
+                                    icon: "calendar",
+                                    destination: ProjectDatesView()
+                                )
+                                navCard(
+                                    index: "06",
+                                    title: "AI生管進度",
+                                    subtitle: "AI Scheduling",
+                                    icon: "sparkles",
+                                    destination: AiProductionScheduleView()
+                                )
+                            }
+                        }
                         dashboardSection(title: "圖檔 / 機械", icon: "ruler") {
                             LazyVGrid(columns: columns, spacing: 12) {
                                 navCard(
@@ -82,7 +108,7 @@ struct HomeView: View {
                             }
                         }
 
-                        dashboardSection(title: "工具 / 紀錄", icon: "folder") {
+                        dashboardSection(title: "工具", icon: "folder") {
                             LazyVGrid(columns: columns, spacing: 12) {
                                 navCard(
                                     index: "17",
@@ -91,13 +117,7 @@ struct HomeView: View {
                                     icon: "wrench",
                                     destination: ToolsView()
                                 )
-                                navCard(
-                                    index: "SR",
-                                    title: "服務紀錄",
-                                    subtitle: "Service Records",
-                                    icon: "clock",
-                                    destination: ServiceRecordSearchView()
-                                )
+
                             }
                         }
 
