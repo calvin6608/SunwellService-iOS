@@ -375,14 +375,26 @@ struct DrawingSearchView: View {
         do {
             switch kind {
             case .drawing:
-                let result = try await APIClient.shared.getImage(partNo: key)
-                let successText = result.success ? "是" : "否"
-                let messageText = translateServerMessage(result.message)
-                resultText = "料號: \(result.partNo)\n" +
-                    "成功: \(successText)\n" +
-                    "訊息: \(messageText)"
-                resultUrl = result.imageUrl
-                resultType = "image"
+                let result = try await APIClient.shared.getDrawing(partNo: key)
+                approvalRequired = result.approvalRequired == true
+                approvalRequestId = result.approvalRequestId
+
+                if approvalRequired {
+                    resultText = "料號: \(result.partNo)\n" +
+                        "狀態: 需要審核\n" +
+                        requestIdText(approvalRequestId) +
+                        "訊息: \(translateServerMessage(result.message))"
+                } else {
+                    let successText = result.success ? "是" : "否"
+                    let typeText = result.resultType ?? ""
+                    let messageText = translateServerMessage(result.message)
+                    resultText = "料號: \(result.partNo)\n" +
+                        "成功: \(successText)\n" +
+                        "類型: \(typeText)\n" +
+                        "訊息: \(messageText)"
+                    resultUrl = result.url
+                    resultType = result.resultType
+                }
 
             case .pdf:
                 let result = try await APIClient.shared.getPdf(partNo: key)
@@ -501,5 +513,6 @@ struct DrawingSearchView: View {
         )
     }
 }
+
 
 
