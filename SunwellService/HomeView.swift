@@ -101,12 +101,14 @@ struct HomeView: View {
                             }
                         }
 
-                        dashboardSection(title: "之後移植", icon: "calendar") {
+                        dashboardSection(title: "服務 / 試機", icon: "calendar") {
                             LazyVGrid(columns: columns, spacing: 12) {
-                                disabledCard(
-                                    title: "Remote Service",
-                                    subtitle: "待移植",
-                                    icon: "person.crop.rectangle"
+                                navCard(
+                                    index: "RS",
+                                    title: "遠端服務紀錄",
+                                    subtitle: "Remote Service",
+                                    icon: "person.crop.rectangle",
+                                    destination: RemoteServiceRecordView()
                                 )
                                 disabledCard(
                                     title: "Commissioning",

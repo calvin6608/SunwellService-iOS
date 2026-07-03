@@ -174,6 +174,39 @@ struct ServiceRecordDto: Decodable, Identifiable {
     let date: String?
 }
 
+struct RemoteServiceCaseDto: Decodable, Identifiable {
+    let id: Int
+    let caseNo: Int?
+    let customer: String?
+    let salesNo: String?
+    let model: String?
+    let machineSerialNo: String?
+    let customerCountry: String?
+    let shipmentDate: String?
+    let warrantyStatus: String?
+    let openDate: String?
+    let problemCategory: String?
+    let contactMethod: String?
+    let remoteTool: String?
+    let remoteId: String?
+    let handler1: String?
+    let handler2: String?
+    let customerContact: String?
+    let urgency: String?
+    let rootCause: String?
+    let status: String?
+    let isClosed: Int?
+    let closeDate: String?
+    let needFollowUp: Int?
+    let followUpDate: String?
+    let workHours: Double?
+    let customerIssue: String?
+    let solution: String?
+    let attachmentPath: String?
+    let createdAt: String?
+    let updatedAt: String?
+}
+
 struct PmcDrawingDto: Decodable {
     let keyword: String
     let success: Bool

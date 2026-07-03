@@ -235,6 +235,17 @@ final class APIClient {
         )
     }
 
+    func searchRemoteServiceCases(keyword: String) async throws -> [RemoteServiceCaseDto] {
+        return try await send(
+            path: "api/service-cases/search",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getRemoteServiceCase(id: Int) async throws -> RemoteServiceCaseDto {
+        return try await send(path: "api/service-cases/\(id)")
+    }
+
     private func send<Response: Decodable>(
         path: String,
         method: String = "GET",
