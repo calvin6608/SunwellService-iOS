@@ -135,6 +135,20 @@ final class APIClient {
         return try await send(path: "api/drw/\(partNo.urlPathEncoded)")
     }
 
+    func getPdf(partNo: String) async throws -> DrawingDto {
+        return try await send(path: "api/pdf/\(partNo.urlPathEncoded)")
+    }
+
+    func suggestDrawings(keyword: String, mode: String) async throws -> [String] {
+        return try await send(
+            path: "api/drawing/suggest",
+            queryItems: [
+                URLQueryItem(name: "keyword", value: keyword),
+                URLQueryItem(name: "mode", value: mode)
+            ]
+        )
+    }
+
     func searchServiceRecords(keyword: String) async throws -> [ServiceRecordDto] {
         return try await send(
             path: "api/service/search",
@@ -210,6 +224,7 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+
 
 
 
