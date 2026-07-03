@@ -373,32 +373,38 @@ struct DrawingSearchView: View {
         approvalRequestId = nil
 
         do {
-            let result: DrawingDto
             switch kind {
             case .drawing:
-                result = try await APIClient.shared.getDrawing(partNo: key)
-            case .pdf:
-                result = try await APIClient.shared.getPdf(partNo: key)
-            }
-
-            approvalRequired = result.approvalRequired == true
-            approvalRequestId = result.approvalRequestId
-
-            if approvalRequired {
-                resultText = "料號: \(result.partNo)\n" +
-                    "狀態: 需要審核\n" +
-                    requestIdText(approvalRequestId) +
-                    "訊息: \(translateServerMessage(result.message))"
-            } else {
+                let result = try await APIClient.shared.getImage(partNo: key)
                 let successText = result.success ? "是" : "否"
-                let typeText = result.resultType ?? ""
                 let messageText = translateServerMessage(result.message)
                 resultText = "料號: \(result.partNo)\n" +
                     "成功: \(successText)\n" +
-                    "類型: \(typeText)\n" +
                     "訊息: \(messageText)"
-                resultUrl = result.url
-                resultType = result.resultType
+                resultUrl = result.imageUrl
+                resultType = "image"
+
+            case .pdf:
+                let result = try await APIClient.shared.getPdf(partNo: key)
+                approvalRequired = result.approvalRequired == true
+                approvalRequestId = result.approvalRequestId
+
+                if approvalRequired {
+                    resultText = "料號: \(result.partNo)\n" +
+                        "狀態: 需要審核\n" +
+                        requestIdText(approvalRequestId) +
+                        "訊息: \(translateServerMessage(result.message))"
+                } else {
+                    let successText = result.success ? "是" : "否"
+                    let typeText = result.resultType ?? ""
+                    let messageText = translateServerMessage(result.message)
+                    resultText = "料號: \(result.partNo)\n" +
+                        "成功: \(successText)\n" +
+                        "類型: \(typeText)\n" +
+                        "訊息: \(messageText)"
+                    resultUrl = result.url
+                    resultType = result.resultType
+                }
             }
         } catch {
             resultText = errorText(error)
@@ -495,4 +501,5 @@ struct DrawingSearchView: View {
         )
     }
 }
+
 
