@@ -174,6 +174,23 @@ struct ServiceRecordDto: Decodable, Identifiable {
     let date: String?
 }
 
+struct PmcDrawingDto: Decodable {
+    let keyword: String
+    let success: Bool
+    let result: String?
+}
+
+struct FileLinkRequest: Encodable {
+    let path: String
+}
+
+struct FileLinkDto: Decodable {
+    let success: Bool
+    let message: String?
+    let url: String?
+    let longUrl: String?
+    let fileName: String?
+}
 struct MachineBomPdfDto: Decodable {
     let command: String
     let success: Bool
@@ -203,6 +220,7 @@ struct AuthCredentials {
     let token: String
     let username: String
 }
+
 
 
 

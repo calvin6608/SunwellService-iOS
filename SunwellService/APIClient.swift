@@ -131,6 +131,22 @@ final class APIClient {
         )
     }
 
+    func searchPmcDrawing(keyword: String) async throws -> PmcDrawingDto {
+        return try await send(
+            path: "api/pmc/search",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getPmcFileLink(path: String) async throws -> FileLinkDto {
+        let body = try encoder.encode(FileLinkRequest(path: path))
+        return try await send(
+            path: "api/pmc/file-link",
+            method: "POST",
+            bodyData: body
+        )
+    }
+
     func getMcsBomPdf(keyword: String) async throws -> MachineBomPdfDto {
         return try await send(
             path: "api/machinebom/mcs",
@@ -287,6 +303,7 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+
 
 
 

@@ -72,13 +72,20 @@ struct HomeView: View {
                                     icon: "gear",
                                     destination: MachineBomView()
                                 )
+                                navCard(
+                                    index: "10",
+                                    title: "PMC 圖檔",
+                                    subtitle: "PMC Drawing",
+                                    icon: "folder",
+                                    destination: PmcDrawingView()
+                                )
                             }
                         }
 
                         dashboardSection(title: "工具 / 紀錄", icon: "folder") {
                             LazyVGrid(columns: columns, spacing: 12) {
                                 navCard(
-                                    index: "10",
+                                    index: "17",
                                     title: "工具",
                                     subtitle: "Tools",
                                     icon: "wrench",
@@ -271,4 +278,5 @@ struct HomeView: View {
         .cornerRadius(8)
     }
 }
+
 
