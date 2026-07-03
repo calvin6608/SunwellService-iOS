@@ -174,6 +174,18 @@ struct ServiceRecordDto: Decodable, Identifiable {
     let date: String?
 }
 
+struct MachineBomPdfDto: Decodable {
+    let command: String
+    let success: Bool
+    let message: String?
+    let pdfUrl: String?
+}
+
+struct MachineBomTextDto: Decodable {
+    let command: String
+    let success: Bool
+    let result: String?
+}
 struct ToolDto: Decodable {
     let command: String
     let success: Bool
@@ -191,6 +203,7 @@ struct AuthCredentials {
     let token: String
     let username: String
 }
+
 
 
 

@@ -131,6 +131,34 @@ final class APIClient {
         )
     }
 
+    func getMcsBomPdf(keyword: String) async throws -> MachineBomPdfDto {
+        return try await send(
+            path: "api/machinebom/mcs",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getMtBomPdf(keyword: String) async throws -> MachineBomPdfDto {
+        return try await send(
+            path: "api/machinebom/mt",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getMcsPnText(keyword: String) async throws -> MachineBomTextDto {
+        return try await send(
+            path: "api/machinebom/mcspn",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getMtPnText(keyword: String) async throws -> MachineBomTextDto {
+        return try await send(
+            path: "api/machinebom/mtpn",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
     func getBnrLicense() async throws -> ToolDto {
         return try await send(path: "api/tools/bnr")
     }
@@ -259,6 +287,8 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+
+
 
 
 

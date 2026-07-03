@@ -11,13 +11,13 @@ struct HomeView: View {
                     NavigationLink("02 零件 / BOM 查詢", destination: PartSearchView())
                     NavigationLink("03 資料查詢", destination: DataSearchView())
                     NavigationLink("99 ERP", destination: ErpSearchView())
+                    NavigationLink("09 MCS/MT 次組立", destination: MachineBomView())
                     NavigationLink("10 工具", destination: ToolsView())
                     NavigationLink("07 CAD 圖檔查詢", destination: DrawingSearchView())
                     NavigationLink("Service Records", destination: ServiceRecordSearchView())
                 }
 
                 Section("Next Porting Targets") {
-                    Label("Machine BOM", systemImage: "wrench.and.screwdriver")
                     Label("Remote Service", systemImage: "person.text.rectangle")
                     Label("Commissioning", systemImage: "checklist")
                 }
@@ -40,5 +40,6 @@ struct HomeView: View {
         }
     }
 }
+
 
 
