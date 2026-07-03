@@ -131,6 +131,41 @@ final class APIClient {
         )
     }
 
+    func getBnrLicense() async throws -> ToolDto {
+        return try await send(path: "api/tools/bnr")
+    }
+
+    func searchTel(keyword: String) async throws -> ToolDto {
+        return try await send(
+            path: "api/tools/tel",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getTelLai() async throws -> ToolDto {
+        return try await send(path: "api/tools/tel-lai")
+    }
+
+    func searchMail(keyword: String) async throws -> ToolDto {
+        return try await send(
+            path: "api/tools/mal",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func searchTrip(keyword: String) async throws -> ToolDto {
+        return try await send(
+            path: "api/tools/trp",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func getServiceChart(keyword: String) async throws -> ToolFileDto {
+        return try await send(
+            path: "api/tools/sc",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
     func getDrawing(partNo: String) async throws -> DrawingDto {
         return try await send(path: "api/drw/\(partNo.urlPathEncoded)")
     }
@@ -224,6 +259,7 @@ private extension String {
         return addingPercentEncoding(withAllowedCharacters: allowed) ?? self
     }
 }
+
 
 
 

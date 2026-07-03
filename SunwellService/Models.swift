@@ -174,10 +174,24 @@ struct ServiceRecordDto: Decodable, Identifiable {
     let date: String?
 }
 
+struct ToolDto: Decodable {
+    let command: String
+    let success: Bool
+    let result: String?
+}
+
+struct ToolFileDto: Decodable {
+    let command: String
+    let success: Bool
+    let message: String?
+    let url: String?
+    let resultType: String?
+}
 struct AuthCredentials {
     let token: String
     let username: String
 }
+
 
 
 
