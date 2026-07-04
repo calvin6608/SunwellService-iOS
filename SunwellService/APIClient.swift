@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 enum APIError: LocalizedError {
     case invalidURL
@@ -228,6 +228,21 @@ final class APIClient {
         )
     }
 
+
+
+    func searchBomPurchase(keyword: String) async throws -> BomPurchaseSearchDto {
+        return try await send(
+            path: "api/bom-purchase/search",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
+
+    func searchElectEc(keyword: String) async throws -> ElectEcSearchDto {
+        return try await send(
+            path: "api/elect-ec/search",
+            queryItems: [URLQueryItem(name: "keyword", value: keyword)]
+        )
+    }
 
     func getGanttPdf(mode: Int) async throws -> GanttPdfDto {
         return try await send(path: "api/gantt/\(mode)")

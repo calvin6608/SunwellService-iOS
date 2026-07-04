@@ -1,4 +1,4 @@
-﻿import Foundation
+import Foundation
 
 struct LoginRequest: Encodable {
     let username: String
@@ -234,6 +234,19 @@ struct MachineBomPdfDto: Decodable {
 struct MachineBomTextDto: Decodable {
     let command: String
     let success: Bool
+    let result: String?
+}
+
+
+struct BomPurchaseSearchDto: Decodable {
+    let success: Bool
+    let keyword: String
+    let result: String?
+}
+
+struct ElectEcSearchDto: Decodable {
+    let success: Bool
+    let keyword: String
     let result: String?
 }
 

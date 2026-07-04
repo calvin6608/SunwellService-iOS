@@ -121,6 +121,30 @@ struct HomeView: View {
                             }
                         }
 
+
+                        dashboardSection(title: "電氣 / EC", icon: "bolt") {
+                            LazyVGrid(columns: columns, spacing: 12) {
+                                navCard(
+                                    index: "11",
+                                    title: "電氣請購明細",
+                                    subtitle: "E-BOM Purchase",
+                                    icon: "doc.text",
+                                    destination: BomPurchaseSearchView()
+                                )
+                                navCard(
+                                    index: "12",
+                                    title: "-EC 料號查詢",
+                                    subtitle: "Elect -EC",
+                                    icon: "magnifyingglass",
+                                    destination: ElectEcSearchView()
+                                )
+                                disabledCard(
+                                    title: "電氣設計進度",
+                                    subtitle: "待移植",
+                                    icon: "bolt"
+                                )
+                            }
+                        }
                         dashboardSection(title: "服務 / 試機", icon: "calendar") {
                             LazyVGrid(columns: columns, spacing: 12) {
                                 navCard(
