@@ -12,21 +12,21 @@ private struct ElectricalColors {
 
 struct BomPurchaseSearchView: View {
     @State private var keyword = ""
-    @State private var resultText = "請輸入關鍵字並按搜尋。"
+    @State private var resultText = "Input keyword and press Search."
     @State private var isLoading = false
 
     var body: some View {
         electricalSearchShell(
-            title: "電氣請購明細",
-            fieldTitle: "關鍵字",
-            placeholder: "例如 FL119 YASKAWA",
+            title: "Electrical Purchase Detail",
+            fieldTitle: "Keyword",
+            placeholder: "Example FL119 YASKAWA",
             keyword: $keyword,
             resultText: resultText,
             isLoading: isLoading,
             onSearch: { Task { await search() } },
             onClear: { clear() }
         )
-        .navigationTitle("電氣請購明細")
+        .navigationTitle("Electrical Purchase Detail")
         .navigationBarTitleDisplayMode(.inline)
     }
 
@@ -34,18 +34,18 @@ struct BomPurchaseSearchView: View {
     private func search() async {
         let key = keyword.trimmed
         guard !key.isEmpty else {
-            resultText = "請輸入關鍵字。"
+            resultText = "Please input keyword."
             return
         }
 
         electricalHideKeyboard()
         isLoading = true
-        resultText = "搜尋電氣請購明細..."
+        resultText = "Searching electrical purchase detail..."
 
         do {
             let result = try await APIClient.shared.searchBomPurchase(keyword: key)
-            resultText = "成功: \(result.success ? "是" : "否")\n" +
-                "關鍵字: \(result.keyword)\n\n" +
+            resultText = "Success: \(result.success ? "Yes" : "No")\n" +
+                "Keyword: \(result.keyword)\n\n" +
                 (result.result ?? "")
         } catch {
             resultText = electricalErrorText(error)
@@ -56,28 +56,28 @@ struct BomPurchaseSearchView: View {
 
     private func clear() {
         keyword = ""
-        resultText = "請輸入關鍵字並按搜尋。"
+        resultText = "Input keyword and press Search."
         electricalHideKeyboard()
     }
 }
 
 struct ElectEcSearchView: View {
     @State private var keyword = ""
-    @State private var resultText = "請輸入生產批號並按搜尋。"
+    @State private var resultText = "Input production batch number and press Search."
     @State private var isLoading = false
 
     var body: some View {
         electricalSearchShell(
-            title: "-EC 料號查詢",
-            fieldTitle: "生產批號",
-            placeholder: "例如 FZ060",
+            title: "-EC Part Search",
+            fieldTitle: "Production Batch No.",
+            placeholder: "Example FZ060",
             keyword: $keyword,
             resultText: resultText,
             isLoading: isLoading,
             onSearch: { Task { await search() } },
             onClear: { clear() }
         )
-        .navigationTitle("-EC 料號查詢")
+        .navigationTitle("-EC Part Search")
         .navigationBarTitleDisplayMode(.inline)
     }
 
@@ -85,18 +85,18 @@ struct ElectEcSearchView: View {
     private func search() async {
         let key = keyword.trimmed
         guard !key.isEmpty else {
-            resultText = "請輸入生產批號。"
+            resultText = "Please input production batch number."
             return
         }
 
         electricalHideKeyboard()
         isLoading = true
-        resultText = "搜尋 -EC 料號..."
+        resultText = "Searching -EC part number..."
 
         do {
             let result = try await APIClient.shared.searchElectEc(keyword: key)
-            resultText = "成功: \(result.success ? "是" : "否")\n" +
-                "生產批號: \(result.keyword)\n\n" +
+            resultText = "Success: \(result.success ? "Yes" : "No")\n" +
+                "Production Batch No.: \(result.keyword)\n\n" +
                 (result.result ?? "")
         } catch {
             resultText = electricalErrorText(error)
@@ -107,7 +107,7 @@ struct ElectEcSearchView: View {
 
     private func clear() {
         keyword = ""
-        resultText = "請輸入生產批號並按搜尋。"
+        resultText = "Input production batch number and press Search."
         electricalHideKeyboard()
     }
 }
@@ -158,11 +158,11 @@ private func electricalSearchShell(
                 }
 
                 HStack(spacing: 12) {
-                    electricalActionButton("搜尋", isLoading: isLoading, action: onSearch)
-                    electricalActionButton("清除", isLoading: isLoading, action: onClear)
+                    electricalActionButton("Search", isLoading: isLoading, action: onSearch)
+                    electricalActionButton("Clear", isLoading: isLoading, action: onClear)
                 }
 
-                electricalSecondaryButton("複製結果", isLoading: isLoading) {
+                electricalSecondaryButton("Copy Result", isLoading: isLoading) {
                     UIPasteboard.general.string = resultText
                 }
 
@@ -236,18 +236,18 @@ private func electricalErrorText(_ error: Error) -> String {
         switch apiError {
         case .server(let status, let message):
             if status == 401 {
-                return "登入已過期。\n請登出後重新登入。"
+                return "Login expired. Please logout and login again."
             }
             if status == 403 {
-                return "權限不足。"
+                return "Permission denied."
             }
-            return "伺服器錯誤: HTTP \(status)\n\(message)"
+            return "Server error: HTTP \(status)\n\(message)"
         default:
             return apiError.localizedDescription
         }
     }
 
-    return "錯誤:\n\(error.localizedDescription)"
+    return "Error:\n\(error.localizedDescription)"
 }
 
 private func electricalHideKeyboard() {
